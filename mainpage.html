@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mainpagestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="selectlanguagesstyle.css">
+</head>
+<body>
+    <div class="vid-container">
+        <video autoplay muted loop id="myVideo" class="yvideo">
+            <source src="blackwebvideo.mp4" id="mysource" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="account-page">
+    <nav id="navbar">
+        <div class="logo-class"></div>
+        <a href="mainpage.html" id="logo">Home</a>
+        <div class="search-container">
+            <div><b> BRAIN TONES </b></div>
+        </div>
+        
+      <div class="navbar-right">
+        <a href="#" onclick="" class="sign">Dark/Light</a>
+        <a href="#"><i class="fa fa-user-circle-o"></i></a>
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+        <div class="themes-section">
+            <div><h1>Themes</h1></div>
+            <div class="theme-container">
+                <div class="theme">
+                    <a onclick="dark()" href="#"><img src="https://monophy.com/media/xT77XGWy4IRCeRbWg0/monophy.gif" alt=""></a> 
+                    <!-- <img src="https://cdn.dribbble.com/users/559/screenshots/3876187/pumpkin_animate_400.gif" alt=""> -->
+                    <h3>Dark</h3>
+                </div>
+                <div class="theme">
+                    <a onclick="halloween()" href="#"><img src="https://i.pinimg.com/originals/3e/b2/a8/3eb2a8e1eec5a15c7d6669fd346ba508.gif" alt=""></a> 
+                    <!-- <img src="https://cdn.dribbble.com/users/559/screenshots/3876187/pumpkin_animate_400.gif" alt=""> -->
+                    <h3>Halloween</h3>
+                </div>
+                <div class="theme">
+                    <a onclick="christmas()" href="#"><img src="https://c.tenor.com/bg3zs6KhtqEAAAAM/happy-christmas-merry-christmas.gif" alt=""></a>
+                    <h3>Christmas</h3>
+                </div>
+                <div class="theme">
+                    <a onclick="diwali()" href="#"><img src="https://media3.giphy.com/media/wyyqRSqoWGSiP66G6a/giphy.gif" alt=""></a>
+                    <!-- <img src="https://c.tenor.com/BYm7fPBRznkAAAAC/diwali-happy-diwali.gif" alt=""> -->
+                    <h3>Diwali</h3>
+                </div>
+                <div class="theme">
+                    <!-- <img src="https://c.tenor.com/rXE-RRZs-_QAAAAM/happy-holi-holi.gif" alt=""> -->
+                    <a onclick="holi()" href="#"><img src="http://i.123g.us/c/emar_holi_happy/card/338123.gif" alt=""></a>
+                    <h3>Holi</h3>
+                </div>
+                
+            </div>
+            <div class="wrapper1">
+                <div class="link_wrapper">
+                  <a id="atag" href="AllLanguages.html">Go To Languages </a>
+                  <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                      <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+                    </svg>
+                  </div>
+                </div>
+                
+              </div>
+
+        </div>
+
+        <!-- <div class="themes-section">
+            <h1>Languages</h1>
+            <div class="theme-container">
+                <div class="theme">
+                    <img src="https://i.pinimg.com/564x/7c/75/0f/7c750ff268feb9080867208e022a8dbf.jpg" alt="">
+                    <h3>Telugu</h3>
+                </div>
+                <div class="theme">
+                    <img src="https://i.pinimg.com/564x/7c/75/0f/7c750ff268feb9080867208e022a8dbf.jpg" alt="">
+                    <h3>Hindi</h3>
+                </div>
+                <div class="theme">
+                    <img src="https://i.pinimg.com/564x/7c/75/0f/7c750ff268feb9080867208e022a8dbf.jpg" alt="">
+                    <h3>English</h3>
+                </div>
+                <div class="theme">
+                    <img src="https://i.pinimg.com/564x/7c/75/0f/7c750ff268feb9080867208e022a8dbf.jpg" alt="">
+                    <h3>Kannada</h3>
+                </div>
+            </div>
+        </div> -->
+    <footer>
+      <div class="footclass">
+        <div class="each products">
+            <h4>Team Members</h4>
+            <li><a href="#">Stephen Eliazer</a></li>
+            <li><a href="#">Phanindra Chowdary</a></li>
+            <li><a href="#">Vamshi Thanuku</a></li>
+            <li><a href="#">Surya Kiran</a></li>
+        </div>
+        <div class="each newsletter">
+            <h4>Contact Us</h4>
+            <p>Fill your Mail to Contact Us.</p>
+            <div class="gmailcombo">
+                <input type="gmail" class="gmail" placeholder="Enter Email" />
+                <button class="button">
+                    Contact Us<span class="arr">&#8594;</span>
+                </button>
+            </div>
+        </div>
+      </div>
+      <div class="down">
+        <div class="each copy">
+            <p>
+                This project is made with
+                <i class="fa fa-heart-o"></i> by
+                <a href="#" class="blue">Brain Tones Team</a>
+            </p>
+        </div>
+
+          <div class="each social">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-globe"></a>
+              <a href="#" class="fa fa-globe"></a>
+          </div>
+      </div>
+  </footer>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () {
+          scrollFunction();
+        };
+  
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 60 ||
+            document.documentElement.scrollTop > 60
+          ) {
+            document.getElementById("navbar").style.padding = "5px 20px";
+            document.getElementById("logo").style.fontSize = "35px";
+            document.getElementById("navbar").style.boxShadow = "0px 0px 10px 10px rgba(0, 0, 0, 0.04)";
+            document.getElementById("navbar").style.backgroundColor = "rgb(25, 25, 25)";
+            mybutton.style.display = "block";
+          } else {
+            document.getElementById("navbar").style.padding = "30px 20px";
+            document.getElementById("logo").style.fontSize = "37px";
+            document.getElementById("navbar").style.boxShadow = "none";
+            document.getElementById("navbar").style.backgroundColor ="transparent";
+            mybutton.style.display = "none";
+          }
+        }
+        
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
+        var video = document.getElementById("myVideo");
+
+        video.play();
+
+        let videoSrc = JSON.stringify(bgVid);
+
+        function dark() {
+            var video = document.getElementById('myVideo');
+            var source = document.getElementById('mysource');
+            
+            source.setAttribute('src', 'blackwebvideo.mp4');
+            
+            video.load();
+            video.play();
+            localStorage.setItem("bgVid", 'blackwebvideo.mp4');
+        }
+        function halloween() {
+            // var video = document.getElementById('myVideo');
+            // var source = document.getElementById('mysource');
+            
+            // source.setAttribute('src', 'halloween.mp4');
+            
+            // video.load();
+            // video.play();
+            document.querySelector("#myVideo > source").src = "halloween.mp4";
+            video.load();
+            
+            localStorage.setItem("bgVid", 'halloween.mp4');
+        }
+        function christmas() {
+            var video = document.getElementById('myVideo');
+            var source = document.getElementById('mysource');
+            
+            source.setAttribute('src', 'christmas.mp4');
+            
+            video.load();
+            video.play();
+            localStorage.setItem("bgVid", 'christmas.mp4');
+        }
+        function diwali() {
+            var video = document.getElementById('myVideo');
+            var source = document.getElementById('mysource');
+            
+            source.setAttribute('src', 'diwali.mp4');
+            
+            video.load();
+            video.play();
+            localStorage.setItem("bgVid", 'diwali.mp4');
+        }
+        function holi() {
+            var video = document.getElementById('myVideo');
+            var source = document.getElementById('mysource');
+            
+            source.setAttribute('src', 'holi.mp4');
+            
+            video.load();
+            video.play();
+            localStorage.setItem("bgVid", 'holi.mp4');
+        }
+      </script>
+
+</body>
+</html>

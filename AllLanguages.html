@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="AllLanguagesStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="mainpage.html">
+
+
+</head>
+<body>
+    
+
+    <div class="account-page">
+        <div class="vid-container">
+            <video autoplay muted loop id="myVideo" class="yvideo">
+                <source src="" id="bgSourceId" type="video/mp4">
+            </video>
+        </div>
+    <nav id="navbar">
+        <div class="logo-class"></div>
+        <a href="mainpage.html" id="logo">Home</a>
+        <div class="search-container">
+            <div><b> BRAIN TONES </b></div>
+        </div>
+        
+      <div class="navbar-right">
+        <a href="#" class="sign">Dark/Light</a>
+        <a href="#"><i class="fa fa-user-circle-o"></i></a>
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+        <div class="themes-section">
+            <h1>All Languages</h1>
+            <div class="theme-container">
+                <div class="row-1">
+                    <div class="theme">
+                        <a onclick="telugu()" href="musicplayer.html"  ><img src="telugu.png" alt=""></a>
+                        <h3>Telugu</h3>
+                    </div>
+                    <div class="theme">
+                        <a onclick="hindi()" href="musicplayer.html" ><img src="hindi.jpg" alt=""></a>
+                        <h3>Hindi</h3>
+                    </div>
+                    <div class="theme">
+                        <a onclick="english()" href="musicplayer.html"><img src="english.jpg" alt=""></a>
+                        <h3>English</h3>
+                    </div>
+                    <div class="theme">
+                        <a onclick="kannada()" href="musicplayer.html"><img src="kannada.png" alt=""></a>
+                        <h3>Kannada</h3>
+                    </div>
+                </div>
+            <div class="row-2">
+                <div class="theme" href="musicplayer.html">
+                    <a onclick="tamil()" href="musicplayer.html"><img src="tamil.png" alt=""></a>
+                    <h3>Tamil</h3>
+                </div>
+                <div class="theme">
+                    <a onclick="malayalam()" href="musicplayer.html"><img src="malayalam.png" alt=""></a>
+                    <h3>Malayalam</h3>
+                </div>
+                <div class="theme">
+                    <a onclick="oddia()" href="musicplayer.html"><img src="oddia.png" alt=""></a>
+                    <h3>Odia</h3>
+                </div>
+                <div class="theme">
+                    <a onclick="marati()" href="musicplayer.html"><img src="marati.png" alt=""></a>
+                    <h3>Marathi</h3>
+                </div>
+            </div>
+            </div>
+        </div>
+    <footer>
+      <div class="footclass">
+        <div class="each products">
+            <h4>Team Members</h4>
+            <li><a href="#">Stephen Eliazer</a></li>
+            <li><a href="#">Phanindra Chowdary</a></li>
+            <li><a href="#">Vamshi Thanuku</a></li>
+            <li><a href="#">Surya Kiran</a></li>
+        </div>
+        <div class="each newsletter">
+            <h4>Contact Us</h4>
+            <p>Fill your Mail to Contact Us.</p>
+            <div class="gmailcombo">
+                <input type="gmail" class="gmail" placeholder="Enter Email" />
+                <button class="button">
+                    Contact Us<span class="arr">&#8594;</span>
+                </button>
+            </div>
+        </div>
+      </div>
+      <div class="down">
+        <div class="each copy">
+            <p>
+                This project is made with
+                <i class="fa fa-heart-o"></i> by
+                <a href="#" class="blue">Brain Tones Team</a>
+            </p>
+        </div>
+
+          <div class="each social">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-globe"></a>
+              <a href="#" class="fa fa-globe"></a>
+          </div>
+      </div>
+  </footer>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () {
+          scrollFunction();
+        };
+  
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 60 ||
+            document.documentElement.scrollTop > 60
+          ) {
+            document.getElementById("navbar").style.padding = "5px 20px";
+            document.getElementById("logo").style.fontSize = "35px";
+            document.getElementById("navbar").style.boxShadow = "0px 0px 10px 10px rgba(0, 0, 0, 0.04)";
+            document.getElementById("navbar").style.backgroundColor = "rgb(25, 25, 25)";
+            mybutton.style.display = "block";
+          } else {
+            document.getElementById("navbar").style.padding = "30px 20px";
+            document.getElementById("logo").style.fontSize = "37px";
+            document.getElementById("navbar").style.boxShadow = "none";
+            document.getElementById("navbar").style.backgroundColor ="transparent";
+            mybutton.style.display = "none";
+          }
+        }
+        
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }       
+
+        let videoSrc = localStorage.getItem("bgVid");
+
+        var video = document.getElementById('myVideo');
+        var sour = document.getElementById('bgSourceId');
+
+        sour.setAttribute('src', videoSrc);
+
+        myVideo.load();
+        myVideo.play();
+        
+        let number = JSON.stringify(num);
+
+        function telugu(){
+            console.log("hi");
+            localStorage.setItem("num", '0');
+        }
+        function hindi() {
+            localStorage.setItem("num", '1');
+        }
+        function english() {
+            localStorage.setItem("num", '2');
+        }
+        function kannada() {
+            localStorage.setItem("num", '3');
+        }
+        function tamil() {
+            localStorage.setItem("num", '4');
+        }
+        function malayalam() {
+            localStorage.setItem("num", '5');
+        }
+        function oddia() {
+            localStorage.setItem("num", '6');
+        }
+        function marati() {
+            localStorage.setItem("num", '7');
+        }
+
+
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

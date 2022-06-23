@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="vid-container">
+        <video autoplay muted loop id="myVideo" class="yvideo">
+            <source src="blackwebvideo.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="account-page">
+    <nav id="navbar">
+        <!-- <div class="logo-class"></div> -->
+        <a href="#" id="logo">Brain Tones</a>
+        <!-- <div class="search-container">
+            <div class="btnbox"> <button class="btn btn-borderunderline">Search Songs</button></div>
+             <form action="/action_page.php">
+              <input type="text" placeholder="Search...">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div> -->
+        
+      <div class="navbar-right">
+        <a href="#">Home</a>
+        <a href="about.html" >About Us</a>
+        <a href="#" class="sign">SIGN IN</a>
+        <!-- <a href="#" class="sign">Dark/Light</a> -->
+      </div>
+    </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-1" width="50%">
+                    <img src="logoimg.png" alt="logo" width="50%">
+                    <!-- <h1>Brain Tones</h1> -->
+                    <p>Music is a Vibration in the Brain <br> rather than the Ear</p>
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button class="button-24" role="button">Login</button>
+                            <hr id="or-line">
+                            <a href="#">Or Login as Guest</a>
+                        </form>
+                        
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button class="button-24" role="button">Register</button>
+                            <hr id="or-line">
+                            <a href="mainpage.html">Or Login as Guest</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+      <div class="footclass">
+          <div class="each products">
+              <h4>Team Members</h4>
+              <li><a href="#">Stephen Eliazer</a></li>
+              <li><a href="#">Phanindra Chowdary</a></li>
+              <li><a href="#">Vamshi Thanuku</a></li>
+              <li><a href="#">Surya Kiran</a></li>
+          </div>
+          <div class="each newsletter">
+              <h4>Contact Us</h4>
+              <p>Fill your Mail to Contact Us.</p>
+              <div class="gmailcombo">
+                  <input type="gmail" class="gmail" placeholder="Enter Email" />
+                  <button class="button">
+                      Contact Us<span class="arr">&#8594;</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+      <div class="down">
+        <div class="each copy">
+            <p>
+                This project is made with
+                <i class="fa fa-heart-o"></i> by
+                <a href="#" class="blue">Brain Tones Team</a>
+            </p>
+        </div>
+
+          <div class="each social">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-globe"></a>
+              <a href="#" class="fa fa-globe"></a>
+          </div>
+      </div>
+  </footer>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () {
+          scrollFunction();
+        };
+  
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 60 ||
+            document.documentElement.scrollTop > 60
+          ) {
+            document.getElementById("navbar").style.padding = "5px 20px";
+            document.getElementById("logo").style.fontSize = "35px";
+            document.getElementById("navbar").style.boxShadow = "0px 0px 10px 10px rgba(0, 0, 0, 0.04)";
+            document.getElementById("navbar").style.backgroundColor = "grey";
+            mybutton.style.display = "block";
+          } else {
+            document.getElementById("navbar").style.padding = "30px 20px";
+            document.getElementById("logo").style.fontSize = "37px";
+            document.getElementById("navbar").style.boxShadow = "none";
+            document.getElementById("navbar").style.backgroundColor ="transparent";
+            mybutton.style.display = "none";
+          }
+        }
+        
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
+        var LoginForm = document.getElementById("LoginForm"); 
+        var RegForm = document.getElementById("RegForm"); 
+        var Indicator = document.getElementById("Indicator"); 
+        
+        function register() {
+            RegForm.style.transform = "translateX(0px)"; 
+            LoginForm.style.transform = "translateX(0px)"; 
+            Indicator.style.transform = "translateX(50px)";
+        }
+        
+        function login() {
+            RegForm.style.transform = "translateX(300px)"; 
+            LoginForm.style.transform = "translateX(300px)"; 
+            Indicator.style.transform = "translateX(-45px)";
+        }
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,771 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display:flex;
+    flex-flow: row wrap;
+    background: black;
+  }
+
+  video{
+    overflow: hidden;
+    /* background-color: turquoise; */
+    object-fit: cover;
+    width: 100vw;
+    height:100vh;
+    position: fixed;
+    transition: all 1.5s linear;
+    z-index: -1;
+
+  }
+  
+  .yvideo{
+    opacity: 1;
+  }
+
+  /* -------------------------------- Navigation Bar --------------------------------*/
+  
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    /* padding: 30px 20px;   */
+    overflow: hidden;
+    transition: 0.4s;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    padding: 25px 20px;
+  }
+
+  /* -------------------------------- Search Song --------------------------------*/
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 350px;
+    /* border: 2px solid red; */
+    width: 40%;
+    text-align: left;
+    /* display: inline-block; */
+    color: white;
+    /* background: cornflowerblue; */
+    border-radius: 100px;
+    font-size: 3.5em;
+    text-align: center;
+  }
+  
+  .btnbox{
+      text-align: left;
+      position: relative;
+      display: inline-block;
+      /* border: 2px solid red; */
+      /* margin:5px 5px; */
+      padding:0px;
+      width:80vh;
+  }
+
+  .btnbox .search-icon{
+      cursor: pointer;
+      float: right;
+  }
+
+  .btnbox .search-icon{
+      cursor: pointer;
+      float: right;
+  }
+  
+  .btn{
+      cursor: text;
+      text-align: left;
+      position: relative;
+      --back-color: #dfdfdf;
+      --accent-color: #3f71afe3;
+      --border-size: 4px;
+      border:none;
+      background-color: var(--back-color);
+      color: rgba(34, 34, 34, 0.575);
+      font-size: 1.2em;
+      padding: .35em .5em;
+      width: 100%;
+      transition: .2s ease-in-out;
+      border-radius: 10px;
+  }
+  
+  .form-container a{
+    text-decoration: none;
+    font-size: medium;
+    color: #005577;
+  }
+  
+  .navbar-right {
+      width: 13%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    /* border: 2px solid red; */
+    /* padding: 16px; */
+    /* margin: 10px; */
+    /* padding: 30px 20px; */
+  }
+  
+  .navbar-right .sign {
+    /* border: 2px solid red; */
+    text-decoration: none;
+    /* margin: 5px; */
+    color: #00FFFF;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.4s;
+  }
+  
+  .navbar-right a:hover {
+    color: #3fc1c9;
+  }
+  
+  .navbar-right .sign {
+    color: white;
+    background-color: #1e7c7c;
+  }
+  
+  .navbar-right .sign:hover {
+    color: white;
+    background-color: #ff523b;
+  }
+
+  .navbar-right .fa{
+    color: white;
+    font-size: 2.33em;
+    transition: .5s;
+  }
+
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .navbar-right .fa:hover .dropdown-content{
+    color: rgb(167, 162, 162);
+    font-size: 2.33em;
+    display: block;
+  }
+  
+  nav #logo {
+    padding: 10px;
+    font-size: 37px;
+    font-weight: 550;
+    text-decoration: none;
+    color:cornsilk;
+    transition: 0.4s;
+    padding: 0px 0px;
+    /* border: 2px solid red; */
+  }
+  
+  .navbar a {
+    float: left;
+  }
+  
+  .navbar-right {
+      float: right;
+  }
+  
+  #myBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      border: none;
+      background-color: #194350;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-size: 40px;
+      height: 55px;
+    }
+    
+    #myBtn:hover {
+      background-color: #729619;
+    }
+
+    /* -------------- Themes -------------- */
+
+    .themes-section{
+        color: whitesmoke;
+        /* border: 2px solid green; */
+        margin: 30px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .theme-container{
+        /* border: 2px solid white; */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        padding: 20px 200px;
+        flex-direction: column;
+    }
+
+    .row-1{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* border: 2px solid red; */
+        width: 100%;
+        margin: 2%;
+    }
+    .row-2{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* border: 2px solid red; */
+        width: 100%;
+        margin: 2%;
+    }
+
+    .theme{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: 2px solid green; */
+        transition: transform .5s;
+    }
+
+    .theme img{
+      border-radius: 50%;
+    }
+
+    .theme:hover{
+        transform: scale(1.1);
+    }
+
+    img {
+        display: block;
+        max-width:330px;
+        max-height:195px;
+        width: auto;
+        height: auto;
+      }
+
+    /* ------------------------------ Login Page ---------------------------- */
+
+    .account-page{
+        padding: 0px 0;
+        /* background: radial-gradient(rgb(68, 67, 67),#202020); */
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .container .row .col-1{
+        color: whitesmoke;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction: column;
+        height: 420px;
+        /* border: 10px solid green; */
+        float: left;
+        width: 48%;
+        margin: 50px  10px 10px  10px;
+    }
+    .container .row .col-1 p{
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction: column;
+        border: 2px solid green;
+        width: 80%;
+        margin: 0px  10px 10px  10px;
+    }
+    .container .row .col-2{
+        /* border: 10px solid green; */
+        float: right;
+        width: 48%;
+        margin: 50px  10px 10px  10px;
+    }
+
+    
+    .form-container{
+        background: whitesmoke;
+        width: 300px;
+        height: 400px;
+        position: relative;
+        text-align: center;
+        padding: 20px 0;
+        margin: auto;
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+    
+    .form-container span{
+        font-weight: bold;
+        padding: 0 10px;
+        color: #555;
+        cursor: pointer;
+        width: 100px;
+        display: inline-block;   
+    }
+    
+    .form-btn{
+        display: inline-block;
+    }
+
+    .form-container form{
+        max-width: 300px;
+        padding: 0 20px;
+        position: absolute;
+        top: 130px;
+        transition: transform 1s;
+    }
+    
+    form input{
+        width: 100%;  
+        height: 30px;
+        margin: 10px 0;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+    }
+    
+    form .btn{
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        margin: 10px 0;
+    }
+
+    form .btn:focus{
+        outline: none;
+    }
+    
+    #LoginForm{
+        left: -300px;
+    }
+    #RegForm{
+        left: 0;
+    }
+    
+    form a{
+        font-size: 12px;
+    }
+
+    
+    
+    #Indicator{
+        width: 90px;
+        border: none;
+        background: #ff523b;
+        height: 3px;
+        margin-top: 5px;
+        transform: translateX(50px);
+        transition: transform 1s;
+    }
+
+    #or-line{
+        width: 230px;
+        border: none;
+        background: #ff523b;
+        height: 3px;
+        margin-top: 15px;
+        transform: translateX(0px);
+        transition: transform 1s;
+    }
+/* -------------------------------- Menu Bar --------------------------------*/
+  
+  #check{
+      display: none;
+  }
+  
+  .bars{
+      margin-right: 20px;
+      color: #005577;
+      font-size: 30px;
+      float: right;
+      border-radius: 5px;
+      transition: 0.4s;
+      cursor: pointer;
+      display:none;
+  }  
+
+  /* ====Footer------- */
+
+  
+footer {
+    padding-top: 50px;
+    /* margin-top: 5%; */
+    background: rgb(15, 15, 15);
+    height: 60vh;
+    width: 100%;
+  }
+  
+  footer h4 {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .newsletter p {
+    margin-top: 5%;
+    font-family: "Poppins", sans-serif;
+    color: white;
+  }
+  
+  .down p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  li {
+    list-style: none;
+    line-height: 35px;
+    font-weight: 100;
+  }
+  
+  li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 350;
+  }
+  
+  li a:hover {
+    transition: 0.4s;
+    color: #8490ff;
+  }
+  
+  .footclass {
+    padding: 0.3% 7% 0% 5%;
+  }
+  
+  .products {
+    float: left;
+    margin: 0 0 0 70px;
+  }
+  
+  .newsletter {
+    float: right;
+    margin-left: 14%;
+    margin-right: 4%;
+    width: 50%;
+  }
+  
+  .feed {
+    float: right;
+  }
+  
+  .down {
+    margin-top: 15%;
+    padding: 5% 7% 0% 5%;
+  }
+  
+  .copy {
+    float: left;
+  }
+  
+  .copy a {
+    text-decoration: none;
+  }
+  
+  .copy .fa,
+  .blue {
+    color: #8490ff;
+  }
+  
+  .social {
+    float: right;
+  }
+  
+  input {
+    margin-top: 4%;
+    padding: 14px 22px;
+    border-radius: 35px;
+    width: 60%;
+    border: none;
+    background: #fff;
+    color: #777;
+  }
+  
+  .button {
+    width: 32%;
+    padding: 12px;
+    border-radius: 40px;
+    border: none;
+    margin-left: 4%;
+    color: white;
+    background-color: #7f53ac;
+    background-image: -webkit-linear-gradient(0deg, #908ced 0%, #b56fe8 100%);
+    text-transform: uppercase;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  
+  .arr {
+    transition: all 0.5s;
+    margin: 10px;
+  }
+  
+  .button:hover {
+    width: 34%;
+  }
+  
+  .button:hover span {
+    transition: 0.5s;
+    padding: 10px;
+  }
+  
+  .fa-heart {
+    background-color: white;
+  }
+  
+  .social .fa {
+    color: white;
+    background-color: #121212;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    padding: 10px;
+  }
+  
+  .social .fa:hover {
+    background-color: #7f53ac;
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+  }
+  
+  .social .fa-facebook {
+    padding: 10px 14px;
+  }
+  
+  footer img {
+    padding: 2px;
+  }
+
+  
+  /* -------------------------------- BOX CSS --------------------------------*/
+  
+  .box{
+      margin:30px;
+      padding:10px;
+      width:60vh;
+      height:60vh;
+      border-radius: 4px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+  }
+  
+  /* -------------------------------- BOX ANIMATION --------------------------------*/
+  
+  #box-1{background-color: #dbe2ef;
+      animation-name: boxan1;
+      animation-duration: 8s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      
+  }
+  
+  @keyframes boxan1 {
+      0%{
+          left:0;
+          z-index: 1;
+      }
+      25%{
+          left:66.25%;
+          z-index: 1;
+      }
+      50%{
+          left:66.25%;
+          z-index: 1;
+      }
+      75%{
+          left:66.25%;
+          z-index: 1;
+      }
+      85%{
+          z-index: 3;
+      }
+      100%{
+          left:0;
+          z-index: 3;
+      }
+  }
+  
+  #box-2{background-color: #3f72af;
+      animation-name: boxan2;
+      animation-duration: 4s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+  }
+  
+  @keyframes boxan2 {
+      0%{
+          left:0;
+          z-index: 1;
+      }
+      50%{
+          left:33.15%;
+          z-index: 1;
+      }
+      100%{
+          left:0;
+          z-index: 1;
+      }
+  }
+  
+  #box-3{background-color: #112d4e;
+  z-index: 0;}
+  
+  .sec a{
+      text-decoration: none;
+      color:white;
+  }
+  
+  #box-3 a{
+      text-decoration: none;
+      color:#112d4e;
+  }
+  
+  /* -------------------------------- TOOLTIP in BOX --------------------------------*/
+  
+  .box span{
+      font-family: 'Times New Roman', Times, serif;
+      visibility: hidden;
+      background-color: #112d4e;
+      color:white;
+      font-size: 15px;
+      border-radius: 5px;
+      text-align: center;
+      padding: 4px 5px;
+      width: 120px;
+      position: absolute;
+      z-index: 1;
+      opacity: 0.7;
+      transition: all .2s ease;
+      font-weight: 600;
+  }
+  
+  .box:hover span{
+      visibility: visible;
+  }
+  
+  span:hover{
+      opacity: 1;
+  }
+  
+  #box-3 span{
+      font-family: 'Times New Roman', Times, serif;
+      visibility: hidden;
+      background-color: white;
+      color:#112d4e;
+      font-size: 15px;
+      border-radius: 5px;
+      text-align: center;
+      padding: 4px 5px;
+      width: 120px;
+      position: absolute;
+      z-index: 1;
+      opacity: 0.7;
+      transition: all .2s ease;
+      font-weight: 600;
+  }
+  
+  #box-3:hover span{
+      visibility: visible;
+  }
+  #box-3 span:hover{
+      opacity: 1;
+  }
+  
+  /* -------------------------------- @media --------------------------------*/
+  
+  @media (max-width:768px){
+  
+      .navbar-right{
+          z-index: 9;
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background-color: #f1f1f1;
+          left:-100%;
+          transition: all ease .5s;
+      }
+      .navbar-right .sign {
+          color:#005577;
+          background:none;
+      }
+      .navbar-right .sign:hover{
+          color:#3fc1c9;
+          background:none;
+      }
+      .navbar-right a{
+          font-size: 18px;
+          display: block;
+          text-align: center;
+          transition: all .4s ease;
+      }
+  
+      input[type="checkbox"]{
+          display: none;
+      }
+  
+      .navbar-right a:hover{
+          font-size: 40px;
+      }
+  
+      .bars{
+          display: block;
+      }
+  
+      #check:checked ~ .navbar-right{
+          left:0;
+      }
+  }

@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="songs.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="musicplayerstyle.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <video autoplay loop muted id="myvideo" class="yvideo">
+        <source src="back.mp4" type="video/mp4">
+    </video>
+    <!-- <div class="hello">
+        <h1>TELUGU</h1>
+    </div> -->
+
+    <div class="right">
+
+        <div class="wrapper">
+            <div class="top-bar">
+              <i class="material-icons">expand_more</i>
+              <span>Now Playing</span>
+              <i class="material-icons">more_horiz</i>
+            </div>
+            <div class="img-area">
+              <img src="haloween.jpg" alt="">
+            </div>
+            <div class="song-details">
+              <p class="name"></p>
+              <p class="artist"></p>
+            </div>
+            <div class="progress-area">
+              <div class="progress-bar">
+                <audio id="main-audio" src=""></audio>
+              </div>
+              <div class="song-timer">
+                <span class="current-time">0:00</span>
+                <span class="max-duration">3:40</span>
+              </div>
+            </div>
+            <div class="controls">
+              <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+              <i id="prev" class="material-icons">skip_previous</i>
+              <div class="play-pause">
+                <i class="material-icons play">play_arrow</i>
+              </div>
+              <i id="next" class="material-icons">skip_next</i>
+              <i id="more-music" class="material-icons">queue_music</i>
+            </div>
+            <div class="music-list">
+              <div class="header">
+                <div class="row">
+                  <i class= "list material-icons">queue_music</i>
+                  <span>Music list</span>
+                </div>
+                <i id="close" class="material-icons">close</i>
+              </div>
+              <ul>
+              </ul>
+            </div>
+          </div>
+          <script src="music-list.js"></script>
+          <script src="script.js"></script>
+
+        </div>
+        
+    </div>
+
+    <div class="music-list">
+        <div class="header">
+          <div class="row">
+            <i class= "list material-icons">queue_music</i>
+            <span>Music list</span>
+          </div>
+          <i id="close" class="material-icons">close</i>
+        </div>
+        <ul>
+        </ul>
+      </div>
+    </div>
+    
+    
+</body>
+</html>
